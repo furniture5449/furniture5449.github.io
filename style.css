@@ -1,126 +1,88 @@
-:root {
-    --brand-blue: #0056b3;
-    --brand-dark: #001c3d;
-    --board-bg: #071624;       
-    --body-bg: #f8f9fa;        
-    --text-dark: #333333;
-    --text-muted: #666666;
-    --text-light: #ffffff;
-    --text-header: #8a9cae; 
-    --status-active: #22c55e;
-    --status-alert: #f59e0b;
-}
-
-* {
+body {
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #ffffff;
+    color: #000000;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: monospace;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-body {
-    background-color: var(--body-bg);
-    color: var(--text-dark);
-    padding: 40px 24px;
+header {
+    background-color: #22c55e;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-btn {
+    background-color: #9ca3af;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
-.wrapper {
+.content-box {
+    max-width: 900px;
     width: 100%;
-    max-width: 1100px;
 }
 
-.description {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 24px;
+h2 {
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    font-weight: normal;
 }
 
-.panel-header {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    background-color: var(--board-bg);
-    padding: 16px 20px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+h3 {
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    font-weight: normal;
 }
 
-.pill-btn {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--text-light);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
+p {
+    font-size: 2.8rem;
+    margin: 0 0 40px 0;
 }
 
-.pill-btn.active {
-    background-color: #0084ff; 
-    border-color: #0084ff;
+s {
+    color: #000000;
 }
 
-.search {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 6px;
-    padding: 6px 12px;
-    color: var(--text-light);
-    font-size: 0.85rem;
-    margin-left: auto;
-    width: 220px;
-}
-
-.search::placeholder {
-    color: rgba(255, 255, 255, 0.3);
-}
-
-.panel-body {
-    background-color: var(--board-bg);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    padding: 10px 20px 24px 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.grid-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-}
-
-.grid-table th {
-    color: var(--text-header);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 16px 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.grid-table td {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 0.9rem;
-    font-weight: 500;
-    padding: 18px 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.badge {
-    font-weight: 700;
-}
-
-.badge.success {
-    color: var(--status-active);
-}
-
-.badge.warning {
-    color: var(--status-alert);
+#update-text {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-top: 20px;
 }
