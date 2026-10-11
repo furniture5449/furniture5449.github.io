@@ -1,0 +1,111 @@
+:root {
+    --neon-accent: #00f2ff;
+    --neon-alt: #ff6600;
+    --dark-bg: #0a0c10;
+    --glass-panel: rgba(16, 22, 34, 0.65);
+    --border-glow: rgba(0, 242, 255, 0.2);
+    --text-main: #f0f4f8;
+    --text-muted: #9cb3c9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+body {
+    background-color: var(--dark-bg);
+    background-image: linear-gradient(to bottom, rgba(10, 12, 16, 0.85), rgba(10, 12, 16, 0.95)), 
+                      url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.display-card {
+    background: var(--glass-panel);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glow);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5),
+                0 0 15px 0 var(--border-glow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.display-card:hover {
+    transform: translateY(-5px);
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--neon-accent),
+                 0 0 20px rgba(0, 242, 255, 0.5);
+    margin-bottom: 15px;
+}
+
+.status-badge {
+    display: inline-block;
+    background: rgba(255, 102, 0, 0.15);
+    border: 1px solid var(--neon-alt);
+    color: var(--neon-alt);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.2);
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+
+.btn-action {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid var(--neon-accent);
+    color: var(--neon-accent);
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.1);
+}
+
+.btn-action:hover {
+    background: var(--neon-accent);
+    color: var(--dark-bg);
+    box-shadow: 0 0 25px var(--neon-accent);
+}
