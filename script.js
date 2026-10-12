@@ -11,6 +11,17 @@ button.addEventListener('click', () => {
     }
 });
 
+function playClickSound() {
+    const sound = document.getElementById("clickSound");
+    
+    // Reset the audio to the beginning so it plays instantly on rapid clicks
+    sound.currentTime = 0; 
+    
+    // Play the audio track
+    sound.play();
+}
+
+
 function triggerRandomChaos() {
     const header = document.querySelector('header');
     const body = document.querySelector('body');
