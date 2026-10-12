@@ -46,6 +46,11 @@ header h1 {
     transform: translateY(-50%);
 }
 
+.nav-btn:active {
+    background-color: #90a0a0
+    
+}
+
 .main-content {
     flex: 1;
     display: flex;
