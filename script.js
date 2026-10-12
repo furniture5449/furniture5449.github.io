@@ -86,11 +86,11 @@ async function tooMuch() {
     body.style.filter = "none";
     body.style.transform = "none";
     body.style.transition = "none";
-    body.style.backgroundImage = "none";
+    body.style.backgroundImage = "bg.png";
     body.style.backgroundColor = "";
     
     if (header) {
-        header.style.backgroundImage = "url('bg.png')";
+        header.style.backgroundImage = "none";
         header.style.backgroundColor = "";
     }
 
