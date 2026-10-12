@@ -48,18 +48,20 @@ header h1 {
     transform: translateY(-50%) scale(1); 
     transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out; 
 
-    white-space: nowrap; /*try to fix*/
-}
-
-.nav-btn:active {
-    background-color: #225d20;
-    transform: translateY(-50%) scale(0.9); 
+    white-space: nowrap;
 }
 
 .nav-btn:hover {
     background-color: #4bda46;
     transform: translateY(-50%) scale(1.1); 
 }
+
+
+.nav-btn:active {
+    background-color: #225d20;
+    transform: translateY(-50%) scale(0.9); 
+}
+
 
 
 .main-content {
