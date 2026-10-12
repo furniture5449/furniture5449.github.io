@@ -90,9 +90,10 @@ async function tooMuch() {
     body.style.backgroundColor = "";
     
     if (header) {
-        header.style.backgroundImage = "none";
+        header.style.backgroundImage = "url('bg.png')";
         header.style.backgroundColor = "";
     }
+
 
     if (button) {
         button.style.display = "none"; 
