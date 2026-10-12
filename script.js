@@ -3,6 +3,14 @@ let swaps = 0;
 const targetClicks = 50;
 const button = document.querySelector('.nav-btn');
 
+function playClickSound() {
+    const sound = document.getElementById("clickSound");
+    if (sound) {
+        sound.currentTime = 0;   
+        sound.play().catch(err => console.log(err));
+    }
+}
+
 function handlePress(e) {
     if (e.type === 'touchstart') e.preventDefault(); 
     button.classList.add('is-pressed');
@@ -33,13 +41,7 @@ button.addEventListener('click', () => {
     }
 });
 
-function playClickSound() {
-    const sound = document.getElementById("clickSound");
-    if (sound) {
-        sound.currentTime = 0;   
-        sound.play().catch(err => console.log(err));
-    }
-}
+
 
 function triggerRandomChaos() {
     const header = document.querySelector('header');

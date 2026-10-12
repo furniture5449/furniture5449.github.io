@@ -59,7 +59,7 @@ header h1 {
 
 .nav-btn:active {
     background-color: #225d20;
-    transform: translateY(-50%) scale(0.9); 
+    transform: translateY(-50%) scale(0.95); 
 }
 
 
