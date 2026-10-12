@@ -53,13 +53,13 @@ header h1 {
 
 .nav-btn:hover {
     background-color: #4bda46;
-    transform: translateY(-50%) scale(1.1); 
+    transform: translateY(-50%) scale(1.05); 
 }
 
 
 .nav-btn:active {
     background-color: #225d20;
-    transform: translateY(-50%) scale(0.95); 
+    transform: translateY(-50%) scale(1); 
 }
 
 
