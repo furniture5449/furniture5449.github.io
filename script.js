@@ -2,6 +2,7 @@ let clickCount = 0;
 let swaps = 0; 
 const targetClicks = 10;
 const button = document.querySelector('.nav-btn');
+const wait = secs => new Promise(res => setTimeout(res, secs*1000));
 
 function playClickSound() {
     const sound = document.getElementById("clickSound");
@@ -41,8 +42,6 @@ button.addEventListener('click', () => {
     }
 });
 
-
-
 function triggerRandomChaos() {
     const header = document.querySelector('header');
     const body = document.querySelector('body');
@@ -72,10 +71,18 @@ function triggerRandomChaos() {
     }
 }
 
-function tooMuch() {
+function cb(cbstr) {
+    const contentBox = document.querySelector('.content-box');
+    if (contentBox) {
+        contentBox.innerHTML = "<h1 style='font-family: monospace; text-align: center; margin-top: 100px; font-size: 3rem;'>" + cbstr + "</h1>";
+    }
+}
+
+async function tooMuch() {
     const header = document.querySelector('header');
     const body = document.querySelector('body');
     const contentBox = document.querySelector('.content-box');
+    
     body.style.filter = "none";
     body.style.transform = "none";
     body.style.transition = "none";
@@ -87,11 +94,28 @@ function tooMuch() {
         header.style.backgroundColor = "";
     }
 
-    if (contentBox) {
-        contentBox.innerHTML = "<h1 style='font-family: monospace; text-align: center; margin-top: 100px; font-size: 3rem;'>Stop.</h1>";
-    }
-
     if (button) {
         button.style.display = "none"; 
+    }
+
+    if (contentBox) {
+        cb("Stop.");
+        await wait(3);
+        
+        cb("k");
+        await wait(2);
+        
+        cb("ig just continue now");
+        await wait(3);
+        
+        cb("btw i removed the button so you dont do it again");
+        await wait(5);
+        
+        contentBox.innerHTML = `
+            <h2>Furn site</h2>
+            <h3>This is in alpha 1.0b</h3>
+            <p>it doesnt have <s>css</s> or <s>js</s></p>
+            <div id="update-text">UPDATE: it now has css, wait a min it also has js now</div>
+        `;
     }
 }
