@@ -1,6 +1,6 @@
 let clickCount = 0;
 let swaps = 0; 
-const targetClicks = 50;
+const targetClicks = 10;
 const button = document.querySelector('.nav-btn');
 
 function playClickSound() {
