@@ -7,14 +7,17 @@
   <link rel="stylesheet" href="../style.css"> 
   <script src="../script.js" defer></script>
   <script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
+    window.addEventListener('DOMContentLoaded', () => {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
 
-    const siteName = urlParams.get('webname');
-    const webLink = urlParams.get('weblink');
-
-    const launcherName = document.querySelector(".launcherName")
-    launcherName.innerText = siteName
+        const siteName = urlParams.get('webname');
+        const webLink = urlParams.get('weblink');
+        const launcherName = document.querySelector(".launcherName");
+        if (launcherName && siteName) {
+            launcherName.innerText = decodeURIComponent(siteName);
+        }
+    });
   </script>
 </head>
 <body>
