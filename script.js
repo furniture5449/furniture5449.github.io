@@ -9,7 +9,7 @@ const button2 = document.querySelector('.createlauncher');
 button2.addEventListener('click', function() {
         this.classList.add('clicked');
     setTimeout(function() {
-        window.location.href = "/launch.html?website=WIP";
+        window.location.href = "/launcher/launch.html?website=WIP";
     }, 5000); 
 });
 function playClickSound() {
