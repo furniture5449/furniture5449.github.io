@@ -6,19 +6,26 @@
   <title>Furn Site</title>
   <link rel="stylesheet" href="../style.css"> 
   <script src="../script.js" defer></script>
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const urlName = urlParams.get('name');
+    const webLink = urlParams.get('website');
+
+  </script>
 </head>
 <body>
 
   <header>
-    <button class="createlauncher">Create</button>
     <h1>Furn Site</h1>
 
   </header>
 
   <main class="main-content">
     <div class="content-box">
-      <h2 style="align-items: center; margin: 0 10px 70% 0;"><div class="name"></div> Launcher</h2>
-
+      <h2 style="align-items: center; margin: 0 10px 70% 0;"><div class="launcherName"></div> Launcher</h2>
+      <button class="fakelaunch">Launch</button>
     </div>
   </main>
 

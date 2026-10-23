@@ -87,7 +87,10 @@ header h1 {
     transform: translateY(-50%) scale(1.05); 
 }
 
-
+input {
+    height: 2.8rem;
+    font-size: 2.0rem;
+}
 
 .createlauncher {
     background-color: #b3b3b3; 

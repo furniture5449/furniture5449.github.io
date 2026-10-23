@@ -3,13 +3,14 @@ let swaps = 0;
 const targetClicks = 10;
 const button = document.querySelector('.nav-btn');
 const wait = secs => new Promise(res => setTimeout(res, secs*1000));
-
-
 const button2 = document.querySelector('.createlauncher');
+const inputLink = document.querySelector('.webLink')
+const webLink = document.querySelector('.siteName')
+
 button2.addEventListener('click', function() {
         this.classList.add('clicked');
     setTimeout(function() {
-        window.location.href = "/launcher/launch.html?website=WIP";
+        window.location.href = "/launcher/launch.html?website="+inputLink.value()+"&webname="+webLink.value();
     }, 5000); 
 });
 function playClickSound() {
