@@ -7,15 +7,32 @@
   <link rel="stylesheet" href="../style.css"> 
   <script src="../script.js" defer></script>
   <script>
+    const wait = secs => new Promise(res => setTimeout(res, secs*1000));
     window.addEventListener('DOMContentLoaded', () => {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-
+        const fakeLaunchButton = document.querySelector(".fakeLaunch")
         const siteName = urlParams.get('webname');
         const webLink = urlParams.get('weblink');
         const launcherName = document.querySelector(".launcherName");
         if (launcherName && siteName) {
             launcherName.innerText = decodeURIComponent(siteName);
+        }
+        fakeLaunchButton.addEventListener('mousedown', buttonPress)
+        function buttonPress() {
+            fakeLaunchButton.innerText = "Loading."
+            wait(1)
+            fakeLaunchButton.innerText = "Loading.."
+            wait(1)
+            fakeLaunchButton.innerText = "Loading..."
+            wait(1)
+            fakeLaunchButton.innerText = "Loading."
+            wait(1)
+            fakeLaunchButton.innerText = "Loading.."
+            wait(4)
+            fakeLaunchButton.innerText = "Launching program"
+            window.location.href = webLink
+            
         }
     });
   </script>
@@ -29,8 +46,8 @@
 
   <main class="main-content">
     <div class="content-box">
-      <h2 style="align-items: center; margin: 0 10px 70% 0;"><div class="launcherName"></div> Launcher</h2>
-      <button class="fakelaunch">Launch</button>
+      <h2 style="align-items: center; margin: 0 10px 70% 0;"><span class="launcherName"></span> Launcher</h2>
+      <button class="fakeLaunch">Launch</button>
     </div>
   </main>
 
