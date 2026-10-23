@@ -4,6 +4,14 @@ const targetClicks = 10;
 const button = document.querySelector('.nav-btn');
 const wait = secs => new Promise(res => setTimeout(res, secs*1000));
 
+
+const button2 = document.querySelector('.createlauncher');
+button2.addEventListener('click', function() {
+        this.classList.add('clicked');
+    setTimeout(function() {
+        window.location.href = "/launch.html?website=WIP";
+    }, 5000); 
+});
 function playClickSound() {
     const sound = document.getElementById("clickSound");
     if (sound) {
@@ -93,7 +101,6 @@ async function tooMuch() {
         header.style.backgroundImage = "none";
         header.style.backgroundColor = "";
     }
-
 
     if (button) {
         button.style.display = "none"; 

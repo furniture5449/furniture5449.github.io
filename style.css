@@ -62,6 +62,43 @@ header h1 {
     transform: translateY(-50%) scale(1); 
 }
 
+.createlauncher {
+    background-color: #9ca3af;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    
+
+    transform: translateY(-50%) scale(1); 
+    transition: background-color 5s ease-in-out, transform 5s ease-in-out; 
+
+    white-space: nowrap;
+}
+
+.createlauncher:hover {
+    background-color: #ffffff;
+    transform: translateY(-50%) scale(1.05); 
+}
+
+
+
+.createlauncher {
+    background-color: #b3b3b3; 
+    transform: translateY(-50%) scale(0.95); 
+}
+
+.createlauncher.clicked, .createlauncher.clicked:hover {
+    background-color: #000000 !important;
+    transform: translateY(-50%) scale(1000);
+}
+
 
 
 .main-content {
