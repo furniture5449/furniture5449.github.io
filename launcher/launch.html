@@ -10,9 +10,11 @@
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
 
-    const urlName = urlParams.get('name');
-    const webLink = urlParams.get('website');
+    const siteName = urlParams.get('webname');
+    const webLink = urlParams.get('weblink');
 
+    const launcherName = document.querySelector(".launcherName")
+    launcherName.innerText = siteName
   </script>
 </head>
 <body>

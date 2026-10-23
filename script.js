@@ -5,14 +5,18 @@ const button = document.querySelector('.nav-btn');
 const wait = secs => new Promise(res => setTimeout(res, secs*1000));
 const button2 = document.querySelector('.createlauncher');
 const inputLink = document.querySelector('.webLink')
-const webLink = document.querySelector('.siteName')
+const inputName = document.querySelector('.siteName')
 
 button2.addEventListener('click', function() {
-        this.classList.add('clicked');
+    this.classList.add('clicked');
     setTimeout(function() {
-        window.location.href = "/launcher/launch.html?website="+inputLink.value()+"&webname="+webLink.value();
+        const webLink = encodeURIComponent(inputLink.value);
+        const webName = encodeURIComponent(inputName.value);
+        
+        window.location.href = "/launcher/launch.html?weblink=" + webLink + "&webname=" + webName;
     }, 5000); 
 });
+
 function playClickSound() {
     const sound = document.getElementById("clickSound");
     if (sound) {
