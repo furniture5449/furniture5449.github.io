@@ -21,15 +21,15 @@
         fakeLaunchButton.addEventListener('mousedown', buttonPress)
         function buttonPress() {
             fakeLaunchButton.innerText = "Loading."
-            wait(1)
+            await wait(1)
             fakeLaunchButton.innerText = "Loading.."
-            wait(1)
+            await wait(1)
             fakeLaunchButton.innerText = "Loading..."
-            wait(1)
+            await wait(1)
             fakeLaunchButton.innerText = "Loading."
-            wait(1)
+            await wait(1)
             fakeLaunchButton.innerText = "Loading.."
-            wait(4)
+            await wait(4)
             fakeLaunchButton.innerText = "Launching program"
             window.location.href = webLink
             
