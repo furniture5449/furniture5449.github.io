@@ -19,7 +19,7 @@
             launcherName.innerText = decodeURIComponent(siteName);
         }
         fakeLaunchButton.addEventListener('mousedown', buttonPress)
-        function buttonPress() {
+        async function buttonPress() {
             fakeLaunchButton.innerText = "Loading."
             await wait(1)
             fakeLaunchButton.innerText = "Loading.."
